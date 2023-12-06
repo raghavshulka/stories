@@ -4,6 +4,7 @@ import Header from "../components/Header/index";
 import Homes from "../components/Home/index";
 import { FlatList } from "react-native-gesture-handler";
 
+
 interface CategoriesObj {
   img: string;
   english: {
