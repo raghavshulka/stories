@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import Header from "../components/Header/index";
 import Homes from "../components/Home/index";
-import { ScrollView } from "react-native-gesture-handler";
+import { FlatList } from "react-native-gesture-handler";
 
 interface CategoriesObj {
   img: string;
@@ -14,16 +14,13 @@ interface CategoriesObj {
 export default function Home() {
   return (
     <View style={styles.container}>
-      <ScrollView >
-        <Header />
-        <Homes />
-        <Homes />
-        <Homes />
-        <Homes />
-        <Homes />
-        <Homes />
-
-      </ScrollView>
+      <Header />
+      <FlatList
+        data={["1", "2", "3", "4", "5", "6"]}
+        renderItem={({ item, index }) => (
+          <Homes key={index} />
+        )}
+      />
 
       <StatusBar style="auto" />
     </View>

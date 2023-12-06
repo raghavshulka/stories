@@ -1,5 +1,6 @@
 export type RootStackParamList = {
   Home: undefined;
+  SelectStory: undefined;
 };
 
 export interface StoriesObj {
